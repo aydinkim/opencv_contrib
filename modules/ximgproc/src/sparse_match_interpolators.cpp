@@ -168,9 +168,9 @@ Ptr<EdgeAwareInterpolatorImpl> EdgeAwareInterpolatorImpl::create()
 void EdgeAwareInterpolatorImpl::interpolate(InputArray from_image, InputArray from_points, InputArray, InputArray to_points, OutputArray dense_flow)
 {
     CV_Assert( !from_image.empty() && (from_image.depth() == CV_8U) && (from_image.channels() == 3 || from_image.channels() == 1) );
-    CV_Assert( !from_points.empty() && from_points.isVector() &&
-               !to_points  .empty() && to_points  .isVector() &&
-               from_points.sameSize(to_points) );
+//    CV_Assert( !from_points.empty() && from_points.isVector() &&
+//               !to_points.empty() && to_points.isVector() &&
+//               from_points.sameSize(to_points) );
 
     w = from_image.cols();
     h = from_image.rows();

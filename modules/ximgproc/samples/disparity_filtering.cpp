@@ -167,7 +167,7 @@ int main(int argc, char** argv)
             left_matcher->setP1(24*wsize*wsize);
             left_matcher->setP2(96*wsize*wsize);
             left_matcher->setPreFilterCap(63);
-            left_matcher->setMode(StereoSGBM::MODE_SGBM_3WAY);
+            //left_matcher->setMode(StereoSGBM::MODE_SGBM_3WAY);
             wls_filter = createDisparityWLSFilter(left_matcher);
             Ptr<StereoMatcher> right_matcher = createRightMatcher(left_matcher);
 
@@ -232,7 +232,7 @@ int main(int argc, char** argv)
             matcher->setSpeckleWindowSize(0);
             matcher->setP1(24*wsize*wsize);
             matcher->setP2(96*wsize*wsize);
-            matcher->setMode(StereoSGBM::MODE_SGBM_3WAY);
+            //matcher->setMode(StereoSGBM::MODE_SGBM_3WAY);
             ROI = computeROI(left_for_matcher.size(),matcher);
             wls_filter = createDisparityWLSFilterGeneric(false);
             wls_filter->setDepthDiscontinuityRadius((int)ceil(0.5*wsize));
